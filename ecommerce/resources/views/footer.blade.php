@@ -1,0 +1,1 @@
+<footer>all copyrights @moxies</footer>
