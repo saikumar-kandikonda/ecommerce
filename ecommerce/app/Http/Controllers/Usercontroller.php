@@ -20,7 +20,7 @@ class Usercontroller extends Controller
             
             $req->session()->put('user',$user);
             $req->session()->put('username',$user['name']);
-            return redirect('/index');
+            return redirect('/');
             
         }
 
