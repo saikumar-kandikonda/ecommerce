@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\product;
 use App\Models\cart;
 use Session;
+Use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     //
@@ -57,4 +58,41 @@ class ProductController extends Controller
         return cart::where('userid',$userid)->count();
        
     }
+
+    public function usercart()
+    {
+        # code...
+        $userid=Session::get('user')['id'];
+        $allproducts=DB::table('cart')
+        ->join('products','cart.productid','=','products.id')
+        ->where('cart.userid',$userid)
+        ->select('products.*','cart.id as cartid')
+        ->get();
+        
+        return view('usercart',['usercart'=>$allproducts]);
+
+    }
+
+    public function removefromcart($id)
+    {
+        # code...
+        cart::destroy($id); 
+        return redirect('usercart');
+
+    }
+    public function ordernow()
+    {
+        # code...
+        $userid=Session::get('user')['id'];
+        $totalprice=DB::table('cart')
+        ->join('products','cart.productid','=','products.id')
+        ->where('cart.userid',$userid)
+        ->sum('products.price');
+        
+        return view('ordernow',['totalprice'=>$totalprice]);
+
+        
+    }
 }
+
+
