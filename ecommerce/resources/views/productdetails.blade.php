@@ -11,18 +11,27 @@
 <h2>{{$singleproductdetails['name']}}</h2><br>
 <h3>{{$singleproductdetails['price']}}</h3><br>
 <h4>{{$singleproductdetails['description']}}</h4><br>
-<form action="">
+<!-- Buy Now -->
+<form action="/ordernow" method="post">
 @csrf
 <input type="hidden" name="productid" value="{{$singleproductdetails['id']}}">
 <button class="btn-lg btn-success">Buy Now</button>
 </form>
+<!-- Buy Now -->
+<!-- Add to cart -->
 <form action="/addtocart" method="post">
 @csrf
 <input type="hidden" name="productid" value="{{$singleproductdetails['id']}}">
 <button class="btn-lg btn-primary">Add to cart</button><br>
 </form>
-
-
+<!-- Add to cart -->
+<!-- Add to Wishlist -->
+<form action="/wishlist" method="post">
+@csrf
+<input type="hidden" name="productid" value="{{$singleproductdetails['id']}}">
+<button class="btn-lg btn-danger">Add to Wishlist</button><br>
+</form>
+<!-- Add to Wishlist -->
 </div>
 </div>
 

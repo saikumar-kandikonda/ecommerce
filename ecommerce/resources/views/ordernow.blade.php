@@ -6,9 +6,9 @@
     <tr>
       <th scope="row">Amount</th>
       <td>
-      @php
+      <!-- @php
     $totalprice=$totalprice
-    @endphp
+    @endphp -->
     {{$totalprice}}
     </td>
     </tr>
@@ -33,7 +33,7 @@
         <tr>
       <th scope="row"><h1>Total Amount</h1></th>
       <td>
-      {{$totalprice+$taxes+$delivery_charges}}
+      {{$taxes+$delivery_charges}}
       </td>
         </tr>
       </tbody>
@@ -44,6 +44,7 @@
                 <div class="form-group">
                   <textarea name="address" placeholder="enter your address" class="form-control" ></textarea>
                 </div>
+            
                 <div class="form-group">
                   <label for="pwd">Payment Method</label> <br> <br>
                   <input type="radio" value="online" id="online"name="payment"><label for="online"> <span>online payment</span> </label><br> <br>

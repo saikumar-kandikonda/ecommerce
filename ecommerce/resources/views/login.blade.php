@@ -1,5 +1,10 @@
 @extends('layout')
 @section('content')
+<!-- this is alert box -->
+
+<!-- this is alert box -->
+
+
 <form method="post" action="login">
 @csrf
 <div class="col-sm-6">

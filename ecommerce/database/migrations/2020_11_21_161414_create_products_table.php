@@ -13,12 +13,14 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        if(Schema::hasTable('products')) return;
+        // if(Schema::hasTable('products')) return;
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->String("name");
             $table->String("price");
             $table->String("category");
+            $table->String("Gender");
+            $table->String("productname");
             $table->String("description");
             $table->String("gallery");
             $table->timestamps();

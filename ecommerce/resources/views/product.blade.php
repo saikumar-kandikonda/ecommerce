@@ -1,5 +1,8 @@
 @extends('layout')
 @section('content')
+
+
+
 <h1>welcome to Home page {{session()->get('username')}}</h1>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -33,14 +36,23 @@
     <span class="sr-only">Next</span>
   </a>
 </div><br><br>
+
+
 @foreach($productdata as $item)
     <div class="item {{$item['id']==1?'active':''}}" style="float:left" >
 <a href="detailsofeachproduct/{{$item['id']}}">
+
       <img src="{{$item['gallery']}}" alt="Los Angeles" style="height:100px">
       <h3>{{$item['name']}}</h3>
 
       </a>
       </div>
     @endforeach
+    
+    <br><br>
+  
+    <img src="\storage\shirts_men\shirt1.jpg" alt="" />this should bedisplayed here
+
+
 
 @endsection

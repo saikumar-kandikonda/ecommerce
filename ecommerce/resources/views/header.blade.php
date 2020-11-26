@@ -8,19 +8,20 @@ if(Session::has('user'))
 $total=ProductController::cartitemscount();
 }
 ?>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">E-Commerce</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Home</a></li>
-      <li><a href="#">Page 1</a></li>
+      <li><a href="/myorders">My orders</a></li>
       <li><a href="#">Page 2</a></li>
-      <li> <form action="/search" method="get">
+      <li> 
+        <form class="form-inline" action="/search" method="get">
   @csrf
-  <input type="text" name="search" id="search" style="width:750px"> 
-  <button class="glyphicon glyphicon-search " type="submit"></button>
+  <input  class="form-control mr-sm-2" type="text" name="search" id="search" style="width:750px"> 
+  <button class="form-control glyphicon glyphicon-search " type="submit"></button>
 </span>
   </form></li>
  
@@ -43,7 +44,7 @@ $total=ProductController::cartitemscount();
 <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       
-      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart({{$total}})</a></li>
+      <li><a href="/usercart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart({{$total}})</a></li>
 
 @endif
 

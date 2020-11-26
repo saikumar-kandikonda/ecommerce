@@ -1,13 +1,19 @@
 @extends('layout')
 @section('content')
 <h1>Your cart  {{session()->get('username')}}</h1>
-<a href="/ordernow"><button class="btn-lg btn-success">ORDER NOW</button></a>
+
 <br><br><br>
 @php
 $totalprice=0
 @endphp
-
+@if($usercart->count()!= 1)
+    <h1>Your cart is empty. Please add some items</h1>
+    @else
+    
+    <a href="/ordernow"><button class="btn-lg btn-success">ORDER NOW</button></a>
+    <br><br><br>
 @foreach($usercart as $item)
+
 <div class="row searched-item cart-list-devider">
              <div class="col-sm-3">
              <a href="detailsofeachproduct/{{$item->id}}">
@@ -31,5 +37,6 @@ $totalprice=0
           <input type="hidden" value="{{$totalprice+=$item->price}}">  
     @endforeach
     <h1>TOTAL PRICE IS {{$totalprice}}</h1>   
+    @endif
 
 @endsection
