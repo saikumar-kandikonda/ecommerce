@@ -33,7 +33,7 @@ $total=ProductController::cartitemscount();
       
       @if(Session::has('user'))
       <li><a href="/usercart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart({{$total}})</a></li>
-
+      <li><a href="/wishlisthere"><span class="glyphicon glyphicon-bookmark"></span>Wishlist</a></li>
       <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{Session::get('user')['name']}}
         <span class="caret"></span></a>
         <ul class="dropdown-menu">

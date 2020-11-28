@@ -7,6 +7,7 @@ Use Illuminate\Support\Facades\Hash;
 use App\Models\product;
 use App\Models\order;
 use App\Models\cart;
+use App\Models\wishlist;
 use App\Models\userdetails;
 use Session;
 Use Illuminate\Support\Facades\DB;
@@ -52,11 +53,32 @@ class ProductController extends Controller
         # code...
         
         if($req->session()->has('user'))
-        {
+        {   
+            $userid=Session::get('user')['id'];
             $cart= new cart;
+            $wishlist= new wishlist;
             $cart->productid=$req->productid;
             $cart->userid=$req->session()->get('user')['id'];
             $cart->save();
+            wishlist::where('productid',$req->productid)->delete();
+            return redirect('/usercart');
+
+        }
+        else
+        {
+            return view('/login');
+        }
+    }
+    public function wishlist(Request $req)
+    {
+        # code...
+        
+        if($req->session()->has('user'))
+        {
+            $wishlist= new wishlist;
+            $wishlist->productid=$req->productid;
+            $wishlist->userid=$req->session()->get('user')['id'];
+            $wishlist->save();
             return redirect('/');
 
         }
@@ -65,6 +87,25 @@ class ProductController extends Controller
             return view('/login');
         }
     }
+    public function wishlisthere(Type $var = null)
+    {
+        # code...
+        if(Session::has('user')){
+            $userid=Session::get('user')['id'];
+            $allproducts=DB::table('wishlist')
+            ->join('products','wishlist.productid','=','products.id')
+            ->where('wishlist.userid',$userid)
+            ->select('products.*','wishlist.id as wishlistid')
+            ->get();
+            
+            return view('wishlist',['usercart'=>$allproducts]);
+            }else
+            {
+                return redirect('/login');
+            }
+
+    }
+
     static function cartitemscount()
     {
         # code...

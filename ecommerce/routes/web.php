@@ -35,7 +35,8 @@ Route::get("/",[ProductController::class,'index']);
 Route::get("detailsofeachproduct/{id}",[ProductController::class,'detailsofeachproduct']);
 Route::get("search",[ProductController::class,'search']);
 Route::post('/addtocart',[ProductController::class,'addtocart']);
-
+Route::post('/wishlist',[ProductController::class,'wishlist']);
+Route::get('/wishlisthere',[ProductController::class,'wishlisthere']);
 Route::get("usercart",[ProductController::class,'usercart']);
 Route::get("removecart/{id}",[ProductController::class,'removefromcart']);
 Route::get('ordernow',[ProductController::class,'ordernow']);

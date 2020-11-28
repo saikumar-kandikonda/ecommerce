@@ -5,7 +5,7 @@
      <div class="col-sm-10">
         <div class="trending-wrapper">
             <h4>Previous Orders</h4>
-            @if($myorders->count()== 1)
+          
             @foreach($myorders as $item)
   
             <div class=" row searched-item cart-list-devider">
@@ -28,9 +28,7 @@
             </div>
            
             @endforeach
-            @else
-            <h1>you dont have any orders</h1>
-            @endif
+           
           
           </div>
 

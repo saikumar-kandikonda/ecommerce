@@ -1,16 +1,11 @@
 @extends('layout')
 @section('content')
-<h1>Your cart  {{session()->get('username')}}</h1>
+<h1>Your wishlist  {{session()->get('username')}}</h1>
 
 <br><br><br>
-@php
-$totalprice=0
-@endphp
 
-    @if($usercart->count()>=1)
-    <a href="/ordernow"><button class="btn-lg btn-success">ORDER NOW</button></a>
-@else
-@endif
+    
+    
     <br><br><br>
 @foreach($usercart as $item)
 
@@ -29,14 +24,19 @@ $totalprice=0
              <div class="col-sm-1">
              PRICE: {{$item->price}}
              </div>
+           
              <div class="col-sm-1">
-             <a href="/removecart/{{$item->cartid}}" class="btn btn-warning" >Remove From Cart</a>
+             <form action="/addtocart" method="post">
+            @csrf
+            <input type="hidden" name="productid" value="{{$item->id}}">
+            <button class="btn btn-danger">Add to cart</button><br>
+            </form> 
              </div>
             </div>
             <br><br>
-          <input type="hidden" value="{{$totalprice+=$item->price}}">  
+         
     @endforeach
-    <h1>TOTAL PRICE IS {{$totalprice}}</h1>   
+ 
    
 
 @endsection
