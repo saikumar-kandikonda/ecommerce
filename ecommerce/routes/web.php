@@ -28,6 +28,8 @@ Route::get('/logout', function () {
     Session::forget('username');
     return view('login');
 });
+
+Route::view("/index",'index');
 Route::view("register",'Register');
 Route::post('register',[ProductController::class,'register']);
 Route::post('/login',[Usercontroller::class,'login']);

@@ -3,7 +3,7 @@
 
 
 
-<h1>welcome to Home page {{session()->get('username')}}</h1>
+<h1>welcome to Products page {{session()->get('username')}}</h1>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -51,7 +51,7 @@
     
     <br><br>
   
-    <img src="\storage\shirts_men\shirt1.jpg" alt="" />this should bedisplayed here
+    <img src="\asset\images\shirts_men\shirt1.jpg" alt="" />this should bedisplayed here
 
 
 

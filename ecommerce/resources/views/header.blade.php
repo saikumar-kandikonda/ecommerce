@@ -16,13 +16,14 @@ $total=ProductController::cartitemscount();
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Home</a></li>
       <li><a href="/myorders">My orders</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="/index">index</a></li>
+    
       <li> 
         <form class="form-inline" action="/search" method="get">
   @csrf
   <input  class="form-control mr-sm-2" type="text" name="search" id="search" style="width:750px"> 
   <button class="form-control glyphicon glyphicon-search " type="submit"></button>
-</span>
+
   </form></li>
  
   

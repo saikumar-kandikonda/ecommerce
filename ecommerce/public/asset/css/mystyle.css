@@ -1,6 +1,54 @@
-    * {
-        text-decoration-color: black;
-        font-weight: 400;
-        font-size: large;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+:root {
+    --primary: #29b6f6;
+    --primarylight: #73e8ff;
+    --primarydark: #0086c3;
+    --Secondary: #eceff1;
+    --Secondarylight: #ffffff;
+    --Secondarydark: #babdbe;
+    --font-family: "Times New Roman", Times, serif;
+}
+
+footer {
+    background-color: red;
+    width: 100%;
+    margin-top: 400px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 450px;
+}
+
+#myCarousel span {
+    background-color: black;
+}
+
+.navbar {
+    font-size: 19px;
+    font-weight: 500;
+    font-family: 'Rubik';
+    overflow: hidden;
+    position: fixed;
+    padding: 16px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.navbar a:hover {
+    background-color: var(--primarylight);
+    text-decoration-color: white;
+    font-size: 110%;
+    text-shadow: 5px red;
+    text-size-adjust: 18px;
+    box-sizing: border-box;
+}
+
+.card {
+    padding: 50px;
+    border-color: red;
+}
+
+.card :hover {
+    background-color: red;
+    transform: scale(1.1);
+}
