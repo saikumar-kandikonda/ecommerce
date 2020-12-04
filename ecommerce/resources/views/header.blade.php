@@ -9,13 +9,13 @@ $total=ProductController::cartitemscount();
 }
 ?>
 
-
-<nav class="navbar navbar-expand-sm bg-light navbar-light navbar-fixed-top">
+<nav class="navbar navbar-light navbar-expand-sm bg-light  navbar-fixed-top" id="myNavbar">
 
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/"><span> E-COMMERCE</span></a>
     </div>
+    
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Home</a></li>
       <li><a href="/men">Men</a></li>
@@ -31,7 +31,7 @@ $total=ProductController::cartitemscount();
  
   
     </ul>
-
+    <div class="collapse navbar-collapse" id="myNavbar">
     
     <ul class="nav navbar-nav navbar-right">
       
