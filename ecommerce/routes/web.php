@@ -45,3 +45,5 @@ Route::get('ordernow',[ProductController::class,'ordernow']);
 Route::post('ordernow',[ProductController::class,'orderproduct']);
 Route::post('orderplace',[ProductController::class,'orderplace']);
 Route::get('myorders',[ProductController::class,'myorders']);
+Route::get("men",[ProductController::class,'men']);
+Route::get("women",[ProductController::class,'women']);

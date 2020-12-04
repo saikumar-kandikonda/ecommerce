@@ -3,56 +3,80 @@
 
 
 
-<h1>welcome to Products page {{session()->get('username')}}</h1>
+<!-- carousel code -->
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
   <!-- Indicators -->
-  <ol class="carousel-indicators">
+  <ul class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" >
-  @foreach($productdata as $item)
-    <div class="item {{$item['id']==1?'active':''}}" >
-<a href="detailsofeachproduct/{{$item['id']}}">
-      <img src="{{$item['gallery']}}" alt="Los Angeles" style="height:300px">
-      <h3>{{$item['name']}}</h3>
-
-      </a>
-      </div>
-    @endforeach
-   
-
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    
+    <div class="carousel-item active">
+      <img src="asset\images\springsale.jpg" alt="Chicago" width="auto" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="asset\images\girlimage.jpg" alt="New York" width="auto" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="asset\images\boyjeans.jpg" alt="New York" width="auto" height="500">
+    </div>
+    <div class="carousel-item ">
+      <img src="asset\images\wallpaper.jpg" alt="Los Angeles" width="auto" height="500">
+    </div>
+  </div>
+  
   <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
+  <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
   </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
   </a>
 </div><br><br>
 
 
+<!-- carousel code -->
+
+<!-- allprdoucts list here -->
+
+<div class="allproducts">
 @foreach($productdata as $item)
     <div class="item {{$item['id']==1?'active':''}}" style="float:left" >
-<a href="detailsofeachproduct/{{$item['id']}}">
 
-      <img src="{{$item['gallery']}}" alt="Los Angeles" style="height:100px">
-      <h3>{{$item['name']}}</h3>
+    
+    <div class="card">
+    
+    <a href="detailsofeachproduct/{{$item['id']}}">
 
+      <img src="{{$item['gallery']}}" alt="Los Angeles">
+    <div class="card-body">
+      <h4 class="card-title">{{$item['name']}}</h4>
+      <h5 class="card-text">{{$item['productname']}}</h5>
       </a>
+    </div>
+  </div>
       </div>
+
+      
     @endforeach
     
     <br><br>
+  <!-- allprdoucts list here -->
+    
   
-    <img src="\asset\images\shirts_men\shirt1.jpg" alt="" />this should bedisplayed here
+ 
+<!-- 
+    <img src="\asset\images\shirts_men\shirt1.jpg" alt="" />this should bedisplayed here -->
 
 
 
 @endsection
+
+</div>

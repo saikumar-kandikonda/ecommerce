@@ -6,7 +6,7 @@
 
 
 
-
+<!-- carousel code -->
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -38,6 +38,9 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div><br><br>
+
+
+<!-- carousel code -->
 <div class="container">
 <!-- card -->
 <div class="card">

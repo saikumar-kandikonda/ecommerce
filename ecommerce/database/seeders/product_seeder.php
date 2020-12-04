@@ -17,41 +17,104 @@ class product_seeder extends Seeder
         //
         DB::table('products')->insert([
             [
-                'name'=>'Oppo mobile',
-                "price"=>"300",
-                "description"=>"A smartphone with 8gb ram and much more feature",
-                "category"=>"mobile",
+                'name'=>'HIGHLANDER',
+                "price"=>"714",
+                "description"=>"Olive Green and Black checked casual shirt, has a spread collar, long sleeves, button placket, curved hem, and 1 patch pocket",
+                "category"=>"shirts",
                 "gender"=>"male",
-                "productname"=>"shoes with something",
+                "productname"=>"Men Olive Green & Black Slim Fit Checked Casual Shirt",
                 "gallery"=>"\storage\shirts,men\shirt1.jpg"
             ],
             [
-                'name'=>'Panasonic Tv',
-                "price"=>"400",
-                "description"=>"A smart tv with much more feature",
-                "category"=>"tv",
+                'name'=>'WROGN',
+                "price"=>"1649",
+                "description"=>"Navy blue checked casual shirt, has a spread collar, a full button placket, long sleeves, a patch pocket, curved hem ",
+                "category"=>"shirts",
                 "gender"=>"male",
-                "productname"=>"shoes with something",
-                "gallery"=>"\storage\shirts,men\shirt1.jpg"
+                "productname"=>"Navy Blue Slim Fit Checked Casual Shirt
+                ",
+                "gallery"=>"\storage\shirts,men\shirt2.jpg"
                         ],
-            [
-                'name'=>'Soni Tv',
-                "price"=>"500",
-                "description"=>"A tv with much more feature",
-                "category"=>"tv",
+                        [
+                            'name'=>'WROGN',
+                "price"=>"1139",
+                "description"=>"Navy blue printed casual shirt, has a spread collar, a full button placket, long sleeves, a patch pocket, a curved hem
+                ",
+                "category"=>"shirts",
                 "gender"=>"male",
-                "productname"=>"shoes with something",
-                "gallery"=>"\storage\shirts,men\shirt1.jpg"
+                "productname"=>"Men Navy Slim Fit Printed Casual Shirt
+                ",
+                "gallery"=>"\storage\shirts,men\shirt3.jpg"
+                                    ],
+                                    [
+                'name'=>'WROGN',
+                "price"=>"1239",
+                "description"=>"Navy blue printed casual shirt, has a spread collar, a full button placket, long sleeves, a patch pocket, a curved hem
+                ",
+                "category"=>"shirts",
+                "gender"=>"male",
+                "productname"=>"Men Navy Slim Fit Printed Casual Shirt
+                ",
+                "gallery"=>"\storage\shirts,men\shirt4.jpg"
+                                                ],
+                                                [
+                                                    'name'=>'WROGN',
+                                                    "price"=>"1109",
+                                                    "description"=>"Grey and black printed casual shirt, has a mandarin collar collar, button placket, long sleeves, curved hem  ",
+                                                    "category"=>"shirts",
+                                                    "gender"=>"male",
+                                                    "productname"=>"Maroon Printed Slim Fit Casual Shirt
+                                                    ",
+                                                    "gallery"=>"\storage\shirts,men\shirt5.jpg"
+                                                            ],
+                                                            [
+                                                                'name'=>'Roadster',
+                                                    "price"=>"599",
+                                                    "description"=>"Maroon printed casual shirt, has a mandarin collar with a short button placket, long sleeves with roll-up tab features, a chest pocket, a curved hem                                                 ",
+                                                    "category"=>"shirts",
+                                                    "gender"=>"male",
+                                                    "productname"=>"Men Grey & Black Regular Fit Printed Casual Shirt                   ",
+                                                    "gallery"=>"\storage\shirts,men\shirt6.jpg"
+                                                                        ],
+                                                                        [
+                                                                            'name'=>'Roadster',
+                                                                            "price"=>"899",
+                                                                            "description"=>"Maroon solid casual shirt, has a mandarin collar, button placket, long sleeves, curved hem                                                                            ",
+                                                                            "category"=>"shirts",
+                                                                            "gender"=>"male",
+                                                                            "productname"=>"Men Maroon Regular Fit Solid Casual Shirt                                                               ",
+                                                                            "gallery"=>"\storage\shirts,men\shirt7.jpg"
+                                                                                    ],
+                                                                                    
+            [
+                                                                            'name'=>'Roadster',
+                                                                            "price"=>"899",
+                                                                            "description"=>"Teal Green solid casual shirt, has a mandarin collar, long sleeves, button placket, curved hem, and 1 patch pocket                                                                            ",
+                                                                            "category"=>"shirts",
+                                                                            "gender"=>"male",
+                                                                            "productname"=>"Men Teal Green Regular Fit Solid Casual Shirt                                                                       ",
+                                                                            "gallery"=>"\storage\shirts,men\shirt8.jpg"
                         ],
+                        [
+                            'name'=>'Roadster',
+                            "price"=>"899",
+                            "description"=>"Teal Green solid casual shirt, has a mandarin collar, long sleeves, button placket, curved hem, and 1 patch pocket                                                                            ",
+                            "category"=>"shirts",
+                            "gender"=>"male",
+                            "productname"=>"Men Teal Green Regular Fit Solid Casual Shirt                                                                       ",
+                            "gallery"=>"\storage\shirts,men\shirt9.jpg"
+],
             [
-                'name'=>'LG fridge',
-                "price"=>"200",
-                "description"=>"A fridge with much more feature",
-                "category"=>"fridge",
+                'name'=>'Mast & Harbour',
+                "price"=>"1499",
+                "description"=>"Blue solid casual shirt, has a button-down collar, long sleeves, button placket, curved hem, and 1 patch pocket
+
+                ",
+                "category"=>"shirts",
                 "gender"=>"male",
-                "productname"=>"shoes with something",
-                "gallery"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTFx-2-wTOcfr5at01ojZWduXEm5cZ-sRYPJA&usqp=CAU"
-             ]
+                "productname"=>"Men Blue Regular Fit Solid Casual Linen Shirt
+                ",
+                "gallery"=>"\storage\shirts,men\shirt10.jpg"             ]
         ]);
     }
 }

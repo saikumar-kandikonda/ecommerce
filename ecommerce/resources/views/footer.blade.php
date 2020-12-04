@@ -1,4 +1,4 @@
-<br><br>
+<!-- <br><br>
 
 <footer>all copyrights @moxies
-</footer>
+</footer> -->

@@ -87,7 +87,7 @@ class ProductController extends Controller
             return view('/login');
         }
     }
-    public function wishlisthere(Type $var = null)
+    public function wishlisthere()
     {
         # code...
         if(Session::has('user')){
@@ -114,7 +114,30 @@ class ProductController extends Controller
         return cart::where('userid',$userid)->count();
        
     }
+    public function men()
+    {
+        # code...
+        
+            
+            $allmenproducts=DB::table('products')
+            ->where('products.Gender','male')
+            ->get();
+            
+            return view('men',['allmen'=>$allmenproducts]);
+           
 
+    }
+    public function women()
+    {
+        # code...
+          
+        $allwomenproducts=DB::table('products')
+        ->where('products.Gender','female')
+        ->get();
+        
+        return view('women',['allwomen'=>$allwomenproducts]);
+
+    }
     public function usercart()
     {
         # code...
@@ -175,6 +198,11 @@ class ProductController extends Controller
     public function orderplace(Request $req)
     {
         # code...
+        if($req->address == "" || $req->payment=="")
+        {
+            return redirect('/ordernow');
+        }else
+        {
         $userid=Session::get('user')['id'];
         $allcart=cart::where('userid',$userid)->get();
         foreach($allcart as $cart){
@@ -190,7 +218,7 @@ class ProductController extends Controller
 
         }
         return redirect('/');
-
+    }
     }
     public function myorders()
     {

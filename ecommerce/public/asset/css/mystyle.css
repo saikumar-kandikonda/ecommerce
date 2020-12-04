@@ -8,15 +8,24 @@
     --font-family: "Times New Roman", Times, serif;
 }
 
+.space {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
 footer {
-    background-color: red;
+    background-color: var(--primarydark);
     width: 100%;
-    margin-top: 400px;
+    height: 20px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    margin-top: 200px;
 }
 
 .carousel-inner img {
     width: 100%;
-    height: 450px;
+    height: 500px;
 }
 
 #myCarousel span {
@@ -27,28 +36,168 @@ footer {
     font-size: 19px;
     font-weight: 500;
     font-family: 'Rubik';
-    overflow: hidden;
     position: fixed;
-    padding: 16px;
-    box-sizing: border-box;
-    border: 1px solid red;
+    height: 70px;
+    box-shadow: 10px 0px 10px 0px grey;
 }
 
 .navbar a:hover {
-    background-color: var(--primarylight);
     text-decoration-color: white;
-    font-size: 110%;
-    text-shadow: 5px red;
     text-size-adjust: 18px;
     box-sizing: border-box;
+    box-shadow: 0px 5px 0px 0px var(--primarydark);
 }
 
 .card {
-    padding: 50px;
-    border-color: red;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px;
+    height: 380px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card :hover {
-    background-color: red;
-    transform: scale(1.1);
+.card-text {
+    width: 250px;
+    font-family: serif;
+    font-size: 15px;
+}
+
+.card-title {
+    font-family: serif;
+    font-size: 19px;
+}
+
+.card img {
+    height: 250px;
+    width: 300px;
+}
+
+.card img:hover {
+    transform: scale3d(1.2, 1.2, 2);
+}
+
+.navbar-brand {
+    font-size: 90px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+.allproducts {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 75px;
+}
+
+.containerlogin {
+    font-weight: 100;
+    font-size: 16px;
+    font-style: bold;
+    padding: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    height: 600px;
+    width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.containerlogin input {
+    width: 600px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 6px;
+    border-width: 2px;
+}
+
+.containerlogin a {
+    text-align: right;
+    width: 600px;
+    margin-top: 40px;
+    font-style: oblique;
+}
+
+.containerlogin button {
+    width: 600px;
+    height: 50px;
+}
+
+.containerprodcutdetails {
+    padding-left: 80px;
+    padding-right: 80px;
+    font-weight: 100;
+    font-family: serif;
+}
+
+.containerprodcutdetails img {
+    width: 500px;
+    height: 600px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.containerprodcutdetails img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.containerprodcutdetails button {
+    width: 140px;
+    height: 50px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+.usercart {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    font-weight: 100;
+    font-family: serif;
+    font-size: 16px;
+}
+
+#ordernowbutton {
+    border-width: 2px;
+    height: 60px;
+    width: 200px;
+}
+
+.totalbutton {
+    height: 200px;
+    width: 800px;
+    color: rgb(4, 58, 18);
+    font-size: 40px;
+    text-align: right;
+}
+
+.ordernow {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-right: 180px;
+    margin-left: 180px;
+}
+
+.ordernow button {
+    border-width: 2px;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+}
+
+.custom-product {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.myorderscard {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    height: 330px;
+    font-size: 14px;
+    font-weight: 200;
+    font-family: rubik;
+    width: 1300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

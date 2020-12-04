@@ -8,19 +8,19 @@
           
             @foreach($myorders as $item)
   
-            <div class=" row searched-item cart-list-devider">
-             <div class="col-sm-6">
-                <a href="detail/{{$item->id}}">
+            <div class=" row searched-item cart-list-devider myorderscard">
+             <div class="col-sm-4">
+                <a href="detailsofeachproduct/{{$item->id}}">
                     <img class="trending-image" src="{{$item->gallery}}" width=350px height=300px>
                   </a>
              </div>
              <div class="col-sm-4">
                     <div class="">
-                      <h2>Name : {{$item->name}}</h2>
-                      <h5>Delivery Status : {{$item->status}}</h5>
-                      <h5>Address : {{$item->address}}</h5>
-                      <h5>Payment Status : {{$item->paymentstatus}}</h5>
-                      <h5>Payment Method : {{$item->paymentmethod}}</h5>
+                      <h1>Name : {{$item->name}}</h1>
+                      <h4>Delivery Status : {{$item->status}}</h4>
+                      <h4>Address : {{$item->address}}</h4>
+                      <h4>Payment Status : {{$item->paymentstatus}}</h4>
+                      <h4>Payment Method : {{$item->paymentmethod}}</h4>
 
                     </div>
              </div>
