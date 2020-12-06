@@ -8,10 +8,11 @@
     --font-family: "Times New Roman", Times, serif;
 }
 
-.space {
+
+/* .space {
     padding-bottom: 60px;
     padding-top: 60px;
-}
+} */
 
 footer {
     background-color: var(--primarydark);
@@ -37,35 +38,39 @@ footer {
     font-weight: 500;
     font-family: 'Rubik';
     position: fixed;
-    height: 70px;
     background-color: grey;
     box-shadow: 0 5px 0 0 var(--primarydark);
 }
 
+.navbar-brand {
+    background-image: url('\asset\images\shirts_men\shirt4.jpg');
+}
+
 .navbar a {
-    margin-top: 10px;
+    margin: 8px;
 }
 
 .navbar button {
-    margin-top: 15px;
+    margin: 12px;
+    font-size: 13px;
 }
 
 .navbar input {
-    margin-top: 15px;
+    margin: 12px;
+    font-size: 16px;
 }
 
 .navbar a:hover {
     text-decoration-color: white;
-    text-size-adjust: 18px;
     box-sizing: border-box;
-    box-shadow: 0px 5px 0px 0px var(--primarydark);
+    box-shadow: 0px 1px 0px 0px var(--primarydark);
 }
 
 .card {
     padding: 25px;
     border-radius: 10px;
     margin: 20px;
-    height: 380px;
+    height: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -96,14 +101,22 @@ footer {
 }
 
 .allproducts {
-    padding-left: 80px;
+    padding-left: 6 0px;
     padding-right: 80px;
     margin-left: 75px;
 }
 
+.allproducts a {
+    color: var(--primarydark);
+}
+
+.allproducts a:hover {
+    color: black;
+}
+
 .containerlogin {
     font-weight: 100;
-    font-size: 16px;
+    font-size: 20px;
     font-style: bold;
     padding: 60px;
     margin-left: auto;

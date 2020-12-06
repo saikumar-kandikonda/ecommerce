@@ -3,7 +3,6 @@
 
 
 
-<h1>welcome to MEnProducts page {{session()->get('username')}}</h1>
 
 
 <div class="allproducts">
@@ -16,7 +15,9 @@
     <a href="detailsofeachproduct/{{$item->id}}">
 
       <img src="{{$item->gallery}}" alt="Los Angeles">
+      
     <div class="card-body">
+    <h3>Price :{{$item->price}} </h3>
       <h4 class="card-title">{{$item->name}}</h4>
       <h5 class="card-text">{{$item->productname}}</h5>
       </a>
@@ -26,6 +27,5 @@
 
       
     @endforeach
-    
-    <br><br>
+    @stop
    
