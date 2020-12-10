@@ -116,7 +116,7 @@ footer {
 
 .containerlogin {
     font-weight: 100;
-    font-size: 20px;
+    font-size: 22px;
     font-style: bold;
     padding: 60px;
     margin-left: auto;
@@ -135,6 +135,7 @@ footer {
     height: 50px;
     border-radius: 6px;
     border-width: 2px;
+    font-size: 14px;
 }
 
 .containerlogin a {
@@ -147,6 +148,7 @@ footer {
 .containerlogin button {
     width: 600px;
     height: 50px;
+    font-size: 18px;
 }
 
 .containerprodcutdetails {
@@ -179,13 +181,26 @@ footer {
     padding-top: 20px;
     font-weight: 100;
     font-family: serif;
-    font-size: 16px;
+    font-size: 18px;
+}
+
+.usercart button {
+    font-size: 14px;
+}
+
+.usercart button:hover {
+    transform: scale(1.1, 1.1);
 }
 
 #ordernowbutton {
     border-width: 2px;
     height: 60px;
     width: 200px;
+    font-size: 18px;
+}
+
+#ordernowbutton:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .totalbutton {

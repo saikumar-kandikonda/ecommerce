@@ -36,7 +36,7 @@ $totalprice=0
             PRICE: <h3> {{$item->price}}</h3>
              </div>
              <div class="col-sm-1">
-             <a href="/removecart/{{$item->cartid}}" class="btn btn-danger" >Remove From Cart&nbsp;<span class="glyphicon glyphicon-remove"></span></a>
+             <a href="/removecart/{{$item->cartid}}"><button class="btn btn-danger" >Remove From Cart&nbsp;<span class="glyphicon glyphicon-remove"></span></button></a>
              </div>
             </div>
             <br><br>
